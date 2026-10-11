@@ -12,8 +12,10 @@
       font-family: "Yu Gothic UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
     }
     main {
+      box-sizing: border-box;
+      width: 100%;
       max-width: 34rem;
-      margin: 14vh auto 4rem;
+      margin: 10vh auto 4rem;
       padding: 0 1.5rem;
     }
     p {
@@ -24,6 +26,12 @@
       margin: 0;
       font-size: 1.35rem;
       font-weight: 600;
+    }
+    h2 {
+      margin: 2.2rem 0 0.3rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
     }
     ul {
       list-style: none;
@@ -51,6 +59,24 @@
       color: #57534e;
       font-size: 0.85rem;
     }
+    .icons a {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .icons svg {
+      width: 22px;
+      height: 22px;
+      flex: none;
+      display: block;
+    }
+    .icons span {
+      display: block;
+      line-height: 1.35;
+    }
+    @media (max-width: 640px) {
+      main { margin-top: 3.2rem; }
+    }
   </style>
 </head>
 <body>
@@ -71,6 +97,56 @@
       <li>
         <a href="https://kessai-chokan.kabukawa.biz/">わが国の決済システムの鳥瞰図
           <small>日本銀行『決済システムレポート』（2024年9月）の図表1</small>
+        </a>
+      </li>
+    </ul>
+
+    <h2>ソーシャル</h2>
+    <ul class="icons">
+      <li>
+        <a href="https://twitter.com/kabukawa">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>X<small>twitter.com/kabukawa</small></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/kabukawa">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5h2.2V6H14c-1.9 0-3.2 1.3-3.2 3.3V11H9v2.4h1.8V19h2.5v-5.6h2.1l.4-2.4h-2.5V9.4c0-.5.3-.9.9-.9z" fill="currentColor"/></svg>
+          <span>Facebook<small>facebook.com/kabukawa</small></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/kabukawa/?hl=ja">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.9" r="0.8" fill="currentColor"/></svg>
+          <span>Instagram<small>instagram.com/kabukawa</small></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/kunihisa-abukawa-78537591/">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 10.2V16M8 8.1h.01M11.2 16v-3.3c0-1.2.8-2 1.9-2s1.8.8 1.8 2V16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>LinkedIn<small>kunihisa-abukawa</small></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://8card.net/p/39727434779">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9.2 9.2c.3-.8 1-1.3 2-1.3 1.3 0 2.1.7 2.1 1.7 0 2.3-4.2 1.3-4.2 3.5 0 .9.8 1.6 2.1 1.6 1.1 0 1.9-.5 2.2-1.3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <span>Eight<small>8card.net</small></span>
+        </a>
+      </li>
+    </ul>
+
+    <h2>ブログ</h2>
+    <ul class="icons">
+      <li>
+        <a href="https://kabukawa.hatenablog.jp/">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9.2 9.1a2.6 2.6 0 1 1 3.2 4.1L9.2 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>Hatena<small>kabukawa.hatenablog.jp</small></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://medium.com/@kabukawa">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17V7.5L8.5 14 12 7.5 15.5 14 20 7.5V17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          <span>Medium<small>medium.com/@kabukawa</small></span>
         </a>
       </li>
     </ul>
