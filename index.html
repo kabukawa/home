@@ -12,15 +12,19 @@
       color: #1c1917;
       font-family: "Yu Gothic UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
     }
-    body::before {
-      content: "";
+    .mark {
       position: fixed;
-      inset: 0;
       z-index: 0;
+      top: 1.4rem;
+      left: 0.8rem;
+      width: min(18rem, calc((100vw - 34rem) / 2 - 1.6rem));
+      height: min(18rem, calc((100vw - 34rem) / 2 - 1.6rem));
+      object-fit: cover;
+      object-position: 18% 64%;
+      border-radius: 50%;
       pointer-events: none;
-      background: url("img/profile.png") left -1.5rem top -4.2rem / 28rem auto no-repeat;
-      -webkit-mask-image: radial-gradient(20rem 19rem at 8.5rem 9.5rem, #000 64%, transparent 90%);
-      mask-image: radial-gradient(20rem 19rem at 8.5rem 9.5rem, #000 64%, transparent 90%);
+      -webkit-mask-image: radial-gradient(circle, #000 96%, transparent 100%);
+      mask-image: radial-gradient(circle, #000 96%, transparent 100%);
     }
     main {
       position: relative;
@@ -87,20 +91,22 @@
       display: block;
       line-height: 1.35;
     }
-    @media (max-width: 1040px) {
-      body::before {
-        position: absolute;
-        inset: auto 0 0 auto;
-        width: 14rem;
-        height: 12rem;
-        background-position: right -0.8rem bottom -1.6rem;
-        background-size: 17rem auto;
-        -webkit-mask-image: radial-gradient(12rem 11rem at 8.2rem 7.2rem, #000 60%, transparent 90%);
-        mask-image: radial-gradient(12rem 11rem at 8.2rem 7.2rem, #000 60%, transparent 90%);
+    @media (max-width: 1100px) {
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
       }
       main {
+        flex: 1 0 auto;
         margin-top: 3.2rem;
-        padding-bottom: 11rem;
+      }
+      .mark {
+        position: static;
+        align-self: flex-end;
+        width: 8.5rem;
+        height: 8.5rem;
+        margin: auto 1.15rem 1.5rem 0;
       }
     }
   </style>
@@ -177,5 +183,6 @@
       </li>
     </ul>
   </main>
+  <img class="mark" src="img/profile.png" alt="">
 </body>
 </html>
