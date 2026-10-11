@@ -11,7 +11,20 @@
       color: #1c1917;
       font-family: "Yu Gothic UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
     }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background: url("img/profile.png") left -1.5rem top -4.2rem / 28rem auto no-repeat;
+      opacity: 0.72;
+      -webkit-mask-image: radial-gradient(17rem 16rem at 8rem 8.5rem, #000 0%, transparent 74%);
+      mask-image: radial-gradient(17rem 16rem at 8rem 8.5rem, #000 0%, transparent 74%);
+    }
     main {
+      position: relative;
+      z-index: 1;
       box-sizing: border-box;
       width: 100%;
       max-width: 34rem;
@@ -73,6 +86,15 @@
     .icons span {
       display: block;
       line-height: 1.35;
+    }
+    @media (max-width: 1100px) {
+      body::before {
+        background-position: left -5.5rem top -7.4rem;
+        background-size: 18rem auto;
+        opacity: 0.55;
+        -webkit-mask-image: radial-gradient(8rem 7rem at 2rem 1.8rem, #000 0%, transparent 72%);
+        mask-image: radial-gradient(8rem 7rem at 2rem 1.8rem, #000 0%, transparent 72%);
+      }
     }
     @media (max-width: 640px) {
       main { margin-top: 3.2rem; }
